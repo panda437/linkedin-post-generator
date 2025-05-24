@@ -15,38 +15,38 @@ export const POST_TYPES = [
   },
   { 
     id: 3, 
-    name: 'AI Augmentation', 
+    name: 'AI so good', 
     description: 'I just saw a junior finish 10 hours of work in one hour, I just made an app in 2 minutes, AI is bad but those who know how to use it are great...'
   },
   { 
     id: 4, 
-    name: 'Prompt Guide Promo', 
+    name: 'Comment farming Promo', 
     description: 'Get my prompt guide on xyz topic, this literally changes the whole field, comment AI guide below to get the free guide worth thousands of dollars...'
   },
   { 
     id: 5, 
-    name: 'Product Launch', 
+    name: 'Product Launch hype', 
     description: 'Company x just launched AI product xyz. This is brilliant it can do soo soo much, its groundbreaking, this changes everything...'
   },
   { 
     id: 6, 
-    name: 'Course Promotion', 
+    name: 'AI Masterclass that no one asked for', 
     description: 'This person dropped the full course on how to do xyz with AI, watch the 10 hour masterclass...'
   },
   { 
     id: 7, 
-    name: 'AI Criticism', 
+    name: 'AI Criticism and Hallucinations', 
     description: 'AI is making xyz worse, its full of hallucinations, inaccuracies...'
   },
   { 
     id: 8, 
-    name: 'AI Services', 
+    name: 'try AI for everything', 
     description: 'Try therapy with AI, interviews with AI, conflict resolution with AI, quote full made up stories of personal experiences...'
   },
   { 
     id: 9, 
-    name: 'AI Development', 
-    description: 'Join my masterclass on how to build full end to end apps with AI, why use LinkedIn when you can make your own...'
+    name: 'Make with AI only after my course', 
+    description: 'Join my masterclass on how to build full end to end apps with AI, why use LinkedIn when you can make your own, make your CRM...'
   },
   { 
     id: 10, 
