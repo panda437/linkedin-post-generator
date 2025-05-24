@@ -47,8 +47,27 @@ export default function PostGenerator({ flavor: initialFlavor }: PostGeneratorPr
   ]
 
   const getRandomPostType = () => {
-    const randomIndex = Math.floor(Math.random() * POST_TYPES.length);
-    return POST_TYPES[randomIndex];
+    // Get the shown types from localStorage or initialize empty array
+    const shownTypes = JSON.parse(localStorage.getItem('shownPostTypes') || '[]');
+    
+    // Get available types that haven't been shown
+    const availableTypes = POST_TYPES.filter(type => !shownTypes.includes(type.id));
+    
+    // If all types have been shown, reset the list
+    if (availableTypes.length === 0) {
+      localStorage.setItem('shownPostTypes', '[]');
+      return POST_TYPES[Math.floor(Math.random() * POST_TYPES.length)];
+    }
+    
+    // Select a random type from available types
+    const randomIndex = Math.floor(Math.random() * availableTypes.length);
+    const selectedType = availableTypes[randomIndex];
+    
+    // Add the selected type to shown types
+    shownTypes.push(selectedType.id);
+    localStorage.setItem('shownPostTypes', JSON.stringify(shownTypes));
+    
+    return selectedType;
   }
 
   const generatePost = async () => {
@@ -207,6 +226,7 @@ export default function PostGenerator({ flavor: initialFlavor }: PostGeneratorPr
 
             {/* Flavor selector and generate button */}
             <div className="border-t border-gray-100 p-4 space-y-4">
+             
               <FlavorSelector 
                 selectedFlavor={selectedFlavor}
                 onFlavorSelect={setSelectedFlavor}
