@@ -6,6 +6,7 @@ import { CheckIcon } from '@heroicons/react/24/solid'
 import FeedbackEmojis from './FeedbackEmojis'
 import { POST_TYPES } from './PostTypeSelector'
 import FlavorSelector from './FlavorSelector'
+import DOMPurify from 'isomorphic-dompurify';
 
 interface PostType {
   id: number
@@ -177,6 +178,8 @@ export default function PostGenerator({ flavor: initialFlavor }: PostGeneratorPr
     }
   }
 
+  const sanitizedContent = post?.content ? DOMPurify.sanitize(post.content) : '';
+
   return (
     <div className="w-full max-w-2xl mx-auto">
       <div className="text-right text-sm text-gray-500">
@@ -197,9 +200,10 @@ export default function PostGenerator({ flavor: initialFlavor }: PostGeneratorPr
             </div>
 
             {/* Post content */}
-            <div className="p-4 text-linkedin-text whitespace-pre-wrap min-h-[200px] text-[15px] leading-6">
-              {post.content}
-            </div>
+            <div 
+              className="p-4 text-linkedin-text whitespace-pre-wrap min-h-[200px] text-[15px] leading-6"
+              dangerouslySetInnerHTML={{ __html: sanitizedContent }}
+            />
 
             {/* Feedback and Copy section */}
             <div className="border-t border-gray-100 p-4">

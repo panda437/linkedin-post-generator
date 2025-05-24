@@ -31,7 +31,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                         rel="noopener noreferrer"
                         className="hover:text-gray-800 transition-colors"
                     >
-                        Made with ❤️ by Asif Akbar
+                        A 2 hour side project by Asif Akbar.🚀 Built because I could.
                     </Link>
                 </footer>
             </body>
