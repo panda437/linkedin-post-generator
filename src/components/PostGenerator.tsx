@@ -181,11 +181,11 @@ export default function PostGenerator({ flavor: initialFlavor }: PostGeneratorPr
   const sanitizedContent = post?.content ? DOMPurify.sanitize(post.content) : '';
 
   return (
-    <div className="w-full max-w-2xl mx-auto">
-      <div className="text-right text-sm text-gray-500">
+    <div className="w-full mx-auto">
+      <div className="text-right text-sm text-gray-500 px-4 md:px-0">
         Remaining generations: {remainingUses}/20
       </div>
-      <div className="linkedin-card">
+      <div className="linkedin-card mx-4 md:mx-auto md:max-w-2xl">
         {post ? (
           <div className="relative">
             {/* LinkedIn-style post header */}
