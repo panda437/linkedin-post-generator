@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --linkedin-blue: #0a66c2;
+  --linkedin-hover-blue: #004182;
+  --linkedin-background: #f3f2ef;
+}
+
+body {
+  background-color: var(--linkedin-background);
+  color: #1f1f1f;
+}
+
+@layer components {
+  .linkedin-button {
+    @apply bg-[#0a66c2] text-white font-medium px-4 py-2 rounded-full hover:bg-[#004182] transition-colors;
+  }
+
+  .linkedin-card {
+    @apply bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow;
+  }
+
+  .linkedin-input {
+    @apply border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none;
+  }
+}

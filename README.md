@@ -1,40 +1,86 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# LinkedIn Post Generator
+
+A modern web application built with Next.js that generates AI-powered LinkedIn posts with different styles and flavors. The application uses GPT-4 to create engaging, viral-worthy content that mimics popular LinkedIn posting styles.
+
+## Features
+
+- **AI-Powered Post Generation**: Uses OpenAI's GPT-4 model to generate contextually relevant LinkedIn posts
+- **Multiple Post Styles**: 
+  - Straight Fire 🔥: Bold, confident, and slightly provocative
+  - Humble Brag 😌: Subtle flexing while maintaining modesty
+  - Fake Humility 🙏: Overly modest posts about achievements
+- **Post Management**:
+  - 20 post generation limit per user
+  - Copy to clipboard functionality
+  - Post feedback system with emoji reactions (👍, ❤️, 😮, 😂, 👎)
+  - Local storage for tracking usage limits
+
+## Tech Stack
+
+- **Frontend**: 
+  - Next.js 13.4
+  - React 18
+  - TailwindCSS for styling
+  - HeadlessUI for UI components
+  - HeroIcons for icons
+- **Backend**:
+  - Next.js API routes
+  - MongoDB with Mongoose for data persistence
+  - OpenAI API for content generation
+- **Deployment**:
+  - Vercel (recommended)
 
 ## Getting Started
 
-First, run the development server:
-
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone [repository-url]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+3. Create a `.env.local` file with the following variables:
+```
+MONGODB_URI=your_mongodb_connection_string
+OPENAI_API_KEY=your_openai_api_key
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+4. Run the development server:
+```bash
+npm run dev
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Usage
 
-## Learn More
+1. Click "Generate LinkedIn Post" to create your first post
+2. After generation, you can:
+   - Copy the post using the copy button
+   - Provide feedback using emoji reactions
+   - Select a different post style
+   - Generate another post with the selected style
+3. Track your remaining generations (limit of 20 per user)
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `/src/app`: Main application routes and API endpoints
+- `/src/components`: React components including PostGenerator and FeedbackEmojis
+- `/src/lib`: Database connection and utility functions
+- `/src/models`: MongoDB schemas and models
+- `/src/types`: TypeScript type definitions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the MIT License - see the LICENSE file for details.
