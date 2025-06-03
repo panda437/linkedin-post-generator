@@ -3,20 +3,20 @@ import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 
 const FLAVORS = [
-  { 
-    id: 'humblebrag', 
-    name: 'Humble Brag', 
-    description: 'Subtle flex while appearing modest' 
+  {
+    id: 'fanatic_leadership',
+    name: 'Fanatic Leadership',
+    description: 'Channel your inner Kohli and manage by sheer passion'
   },
-  { 
-    id: 'fake_humility', 
-    name: 'Fake Humility', 
-    description: 'Overly modest about achievements' 
+  {
+    id: 'data_driven_hustle',
+    name: 'Data-Driven Hustle',
+    description: 'Every move backed by spreadsheets and adrenaline'
   },
-  { 
-    id: 'straight_fire', 
-    name: 'Straight Fire 🔥', 
-    description: 'No holds barred, pure hype' 
+  {
+    id: 'never_say_die',
+    name: 'Never Say Die',
+    description: 'Because waiting sixteen seasons builds character'
   }
 ]
 
@@ -27,14 +27,14 @@ interface FlavorSelectorProps {
 
 export default function FlavorSelector({ selectedFlavor, onFlavorSelect }: FlavorSelectorProps) {
   const flavorOptions = [
-    { id: 'straight_fire', label: 'Straight Fire 🔥' },
-    { id: 'humblebrag', label: 'Humble Brag 😌' },
-    { id: 'fake_humility', label: 'Fake Humility 🙏' }
+    { id: 'fanatic_leadership', label: 'Fanatic Leadership' },
+    { id: 'data_driven_hustle', label: 'Data-Driven Hustle' },
+    { id: 'never_say_die', label: 'Never Say Die 💪' }
   ];
 
   return (
     <div className="flex flex-col space-y-2">
-      <label className="text-sm font-medium text-gray-700">Select Post Style:</label>
+      <label className="text-sm font-medium text-gray-700">Pick Your Lesson:</label>
       <div className="flex space-x-2">
         {flavorOptions.map((option) => (
           <button

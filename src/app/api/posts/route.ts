@@ -22,7 +22,7 @@ export async function POST(req: Request) {
       messages: [
         {
           role: "system",
-          content: `You are a LinkedIn post generator. Generate a ${flavor} style post about ${postTypeDescription}. Make it sound enthusiastic and viral-worthy, around 200 words. No emoji usage. Embody the AI techbro, short punchy sentences, bulletpoints in between, sense of self importance, and a touch of arrogance. Use a tone that is confident and slightly provocative. replace xyz with real companies and products from news`,
+          content: `You are a LinkedIn post generator. Generate a ${flavor} style post about lessons from RCB's title win for corporate life. Topic: ${postTypeDescription}. Make it enthusiastic and viral-worthy, around 200 words. No emoji usage. Keep short punchy sentences, bullet points, and a hint of sarcasm. Replace xyz with real companies and products from news`,
         }
       ],
     })

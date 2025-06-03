@@ -1,14 +1,14 @@
-# LinkedIn Post Generator
+# RCB Corporate Post Generator
 
-A modern web application built with Next.js that generates AI-powered LinkedIn posts with different styles and flavors. The application uses GPT-4 to create engaging, viral-worthy content that mimics popular LinkedIn posting styles.
+A fun web application built with Next.js that generates sarcastic LinkedIn posts about the corporate lessons everyone claims to learn from RCB finally winning the title. The app uses GPT-4 to craft enthusiastic, tongue-in-cheek content.
 
 ## Features
 
-- **AI-Powered Post Generation**: Uses OpenAI's GPT-4 model to generate contextually relevant LinkedIn posts
-- **Multiple Post Styles**: 
-  - Straight Fire 🔥: Bold, confident, and slightly provocative
-  - Humble Brag 😌: Subtle flexing while maintaining modesty
-  - Fake Humility 🙏: Overly modest posts about achievements
+- **AI-Powered Post Generation**: Uses OpenAI's GPT-4 model to create posts riffing on RCB's big win
+- **Multiple Post Styles**:
+  - Fanatic Leadership: Channel intense captaincy energy
+  - Data-Driven Hustle: Spreadsheets meet adrenaline
+  - Never Say Die 💪: Because sixteen seasons of waiting builds character
 - **Post Management**:
   - 20 post generation limit per user
   - Copy to clipboard functionality
@@ -57,7 +57,7 @@ npm run dev
 
 ## Usage
 
-1. Click "Generate LinkedIn Post" to create your first post
+1. Click "Generate RCB Post" to create your first post
 2. After generation, you can:
    - Copy the post using the copy button
    - Provide feedback using emoji reactions
