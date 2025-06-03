@@ -5,7 +5,7 @@ export interface Post {
     feedback: 'positive' | 'neutral' | 'negative' | null
   }
   
-  export type PostFlavor = 'humblebrag' | 'fake_humility' | 'straight_fire'
+  export type PostFlavor = 'fanatic_leadership' | 'data_driven_hustle' | 'never_say_die'
   
   export type PostType = {
     id: number

@@ -15,7 +15,7 @@ interface PostType {
 }
 
 interface PostGeneratorProps {
-  flavor?: 'straight_fire' | 'fake_humility' |  'humblebrag'
+  flavor?: 'fanatic_leadership' | 'data_driven_hustle' | 'never_say_die'
 }
 
 interface GeneratedPost {
@@ -28,7 +28,7 @@ export default function PostGenerator({ flavor: initialFlavor }: PostGeneratorPr
   const [post, setPost] = useState<GeneratedPost | null>(null)
   const [loading, setLoading] = useState(false)
   const [copied, setCopied] = useState(false)
-  const [selectedFlavor, setSelectedFlavor] = useState<string>('straight_fire')
+  const [selectedFlavor, setSelectedFlavor] = useState<string>('fanatic_leadership')
   const [remainingUses, setRemainingUses] = useState(20)
   
   useEffect(() => {
@@ -42,9 +42,9 @@ export default function PostGenerator({ flavor: initialFlavor }: PostGeneratorPr
   }, [])
 
   const flavorOptions = [
-    { id: 'straight_fire', label: 'Straight Fire 🔥' },
-    { id: 'humblebrag', label: 'Humble Brag 😌' },
-    { id: 'fake_humility', label: 'Fake Humility 🙏' }
+    { id: 'fanatic_leadership', label: 'Fanatic Leadership' },
+    { id: 'data_driven_hustle', label: 'Data-Driven Hustle' },
+    { id: 'never_say_die', label: 'Never Say Die 💪' }
   ]
 
   const getRandomPostType = () => {
@@ -82,7 +82,7 @@ export default function PostGenerator({ flavor: initialFlavor }: PostGeneratorPr
     try {
       const selectedPostType = getRandomPostType();
       const body = {
-        flavor: 'straight_fire', // Always use straight_fire for first post
+        flavor: 'fanatic_leadership', // Always use this style for the first post
         postType: selectedPostType
       }
       const response = await fetch('/api/posts', {
@@ -193,7 +193,7 @@ export default function PostGenerator({ flavor: initialFlavor }: PostGeneratorPr
               <div className="flex items-center space-x-3">
                 <div className="h-12 w-12 rounded-full bg-gradient-to-r from-linkedin-blue to-linkedin-hover" />
                 <div>
-                  <h3 className="font-semibold text-linkedin-text">AI Post Generator</h3>
+                  <h3 className="font-semibold text-linkedin-text">RCB Wisdom Generator</h3>
                   <p className="text-sm text-gray-500">Generated • {new Date(post.createdAt).toLocaleDateString()}</p>
                 </div>
               </div>
@@ -265,7 +265,7 @@ export default function PostGenerator({ flavor: initialFlavor }: PostGeneratorPr
                   <span>Generating...</span>
                 </div>
               ) : (
-                'Generate LinkedIn Post'
+                'Generate RCB Post'
               )}
             </button>
           </div>
